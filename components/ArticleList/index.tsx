@@ -10,7 +10,7 @@ export default function ArticleList({ articles }: Props) {
     return null;
   }
   if (articles.length === 0) {
-    return <p>記事がありません。</p>;
+    return <p>Article does not exist.</p>;
   }
   return (
     <ul>

@@ -1,2 +1,2 @@
-// 1ページの表示件数
+// Number of items displayed per page
 export const LIMIT = 10;
