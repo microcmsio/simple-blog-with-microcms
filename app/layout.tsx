@@ -29,7 +29,7 @@ export default async function RootLayout({ children }: Props) {
     limit: LIMIT,
   });
   return (
-    <html lang="ja">
+    <html lang="en">
       <body>
         <Header />
         <Nav tags={tags.contents} />
