@@ -1,16 +1,16 @@
-# シンプルなブログ
+# Simple Blog with microCMS
 
 ![](public/cover.png)
 
-microCMS 公式のシンプルなブログのテンプレートです。
+This is a microCMS official simple blog template.
 
-## 動作環境
+## System Requirements
 
-Node.js 18 以上
+Node.js 18 or above
 
-## 環境変数の設定
+## Environmental Variables
 
-ルート直下に`.env`ファイルを作成し、下記の情報を入力してください。
+Create a `.env` file directly under root and enter the following information
 
 ```
 MICROCMS_API_KEY=xxxxxxxxxx
@@ -19,50 +19,95 @@ BASE_URL=xxxxxxxxxx
 ```
 
 `MICROCMS_API_KEY`
-microCMS 管理画面の「サービス設定 > API キー」から確認することができます。
+You can check it from the microCMS dashboard under "Service Settings > API Keys".
 
 `MICROCMS_SERVICE_DOMAIN`
-microCMS 管理画面の URL（https://xxxxxxxx.microcms.io）の xxxxxxxx の部分です。
+The xxxxxxxxxx part of the microCMS dashboard URL (https://xxxxxxxx.microcms.io).
 
 `BASE_URL`
-デプロイ先の URL です。プロトコルから記載してください。
+The URL to deploy to. Please describe it from the protocol.
 
 例）
-開発環境 → http://localhost:3000
-本番環境 → https://xxxxxxxx.vercel.app/ など
+development → http://localhost:3000
+production → https://xxxxxxxx.vercel.app/ etc.
 
-## 開発の仕方
+## Installation
 
-1. パッケージのインストール
+1. Install package
 
 ```bash
 npm install
 ```
 
-2. 開発環境の起動
+2. Launch the development environment
 
 ```bash
 npm run dev
 ```
 
-3. 開発環境へのアクセス
-   [http://localhost:3000](http://localhost:3000)にアクセス
+3. Access to development environment
+   Access to [http://localhost:3000](http://localhost:3000)
 
-## 画面プレビューの設定
+---
 
-下書き状態のコンテンツをプレビューするために、microCMS 管理画面にて画面プレビューの設定が必要です。
+## microCMS Setup
 
-ブログ API の「API 設定 > 画面プレビュー」に下記のように設定してください。
-※`your-domain`部分はデプロイ先のドメインに置き換えてください。（localhost 指定でも動作します）
+1. Go to [https://app.microcms.io/signup](https://app.microcms.io/signup) to create an account.You can also set your language preference to English at https://app.microcms.io/profile/language.
 
-![blog-preview](https://github.com/microcmsio/nextjs-simple-blog-template/assets/4659294/5045ac9e-3699-47b4-8927-4187114d75bd)
+   ![](public/signin.png)
 
-設定後はコンテンツ編集画面にて画面プレビューボタンが利用可能になります。
+2. Go to [https://app.microcms.io/create-service](https://app.microcms.io/create-service) to create a service. When creating a service, please select "Create your own".
 
-## Vercel へのデプロイ
+   ![](public/create-service.png)
 
-[Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)から簡単にデプロイが可能です。
+3. Create an API as follows
 
-リポジトリを紐付け、環境変数を `Environment Variables` に登録後、デプロイしてみましょう。
+   ```
+   # writer
+   - Field ID: name(Text Field)
+   - Field ID: profile(Text Area)
+   - Field ID: image(Image)
+   ```
+
+   ![](public/writer.png)
+
+   ```
+   # tag
+   - Field ID: name(Text Field)
+   ```
+
+   ![](public/tag.png)
+
+   ```
+   # blog
+   - Field ID: title(Text Field)
+   - Field ID: description(Text Area)
+   - Field ID: content(Rich Text Editor)
+   - Field ID: thumbnail(Image)
+   - Field ID: tags(Multiple Content References - tag)
+   - Field ID: writer(Content Reference - writer)
+   ```
+
+   ![](public/blog.png)
+
+4. Create and publish tag, writer, and blog content.
+
+### Page Preview Settings
+
+In order to preview draft content, a page preview must be set up in the microCMS administration page.
+
+Set the following in "API Settings > Page Preview" of the Blog API.
+
+Replace `your-domain` with your deployed domain. (It also works with localhost)
+
+![](public/page-preview-settings.png)
+
+Once set, the page preview button will be available on the content editing page.
+
+## Deploy to Vercel
+
+Easily deployed from the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
+
+Tie the repository together and register environment variables in the `Environment Variables`. Deployment is now complete!
 
 ![](public/img-vercel-settings.png)
