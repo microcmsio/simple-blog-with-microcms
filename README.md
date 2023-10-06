@@ -50,11 +50,11 @@ npm run dev
 
 ---
 
-## microCMS Setup
+## [microCMS](https://microcms.io/en) Setup
 
 1. Go to [https://app.microcms.io/signup](https://app.microcms.io/signup) to create an account.You can also set your language preference to English at https://app.microcms.io/profile/language.
 
-   ![](public/signin.png)
+   ![](public/signin-en.png)
 
 2. Go to [https://app.microcms.io/create-service](https://app.microcms.io/create-service) to create a service. When creating a service, please select "Create your own".
 
