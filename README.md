@@ -60,7 +60,9 @@ npm run dev
 
    ![](public/create-service.png)
 
-3. Create APIｓ as follows
+3. Create APIs as follows
+
+   Create three list format APIs.
 
    ```
    # writer（List Format API）
@@ -90,7 +92,7 @@ npm run dev
 
    ![](public/blog.png)
 
-4. Create and publish tag, writer, and blog content.
+5. Create and publish tag, writer, and blog content.
 
 ### Page Preview Settings
 
