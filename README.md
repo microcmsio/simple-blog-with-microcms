@@ -60,7 +60,7 @@ npm run dev
 
    ![](public/create-service.png)
 
-3. Create an API as follows
+3. Create APIｓ as follows
 
    ```
    # writer（List Format API）
