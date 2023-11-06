@@ -63,7 +63,7 @@ npm run dev
 3. Create an API as follows
 
    ```
-   # writer
+   # writer（List Format API）
    - Field ID: name(Text Field)
    - Field ID: profile(Text Area)
    - Field ID: image(Image)
@@ -72,14 +72,14 @@ npm run dev
    ![](public/writer.png)
 
    ```
-   # tag
+   # tag（List Format API）
    - Field ID: name(Text Field)
    ```
 
    ![](public/tag.png)
 
    ```
-   # blog
+   # blog（List Format API）
    - Field ID: title(Text Field)
    - Field ID: description(Text Area)
    - Field ID: content(Rich Text Editor)
