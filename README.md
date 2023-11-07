@@ -108,8 +108,6 @@ Once set, the page preview button will be available on the content editing page.
 
 ## Deploy to Vercel
 
-Easily deployed from the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
+deploy the example using Vercel:
 
-Tie the repository together and register environment variables in the `Environment Variables`. Deployment is now complete!
-
-![](public/img-vercel-settings.png)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?demo-description=This%20is%20a%20microCMS%20official%20simple%20blog%20template.&demo-image=https://github.com/microcmsio/simple-blog-with-microcms/blob/main/public/cover.png?raw=true&demo-title=Simple%20Blog%20with%20microCMS&demo-url=https://simple-blog-with-microcms.vercel.app/&from=templates&project-name=Simple%20Blog%20with%20microCMS&repository-name=Simple%20Blog%20with%20microCMS&repository-url=https://github.com/microcmsio/simple-blog-with-microcms&env=MICROCMS_API_KEY,MICROCMS_SERVICE_DOMAIN,BASE_URL)
