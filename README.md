@@ -4,6 +4,22 @@
 
 This is a microCMS official simple blog template.
 
+This blog is built using microCMS, a headless CMS made in Japan, and Next.js.
+
+You are free to enter the following information in this blog.
+- Blog body (& its meta information)
+- Author
+- Tags
+
+## Demo
+https://simple-blog-with-microcms.vercel.app/
+
+## Deploy to Vercel
+deploy the example using Vercel:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?demo-description=This%20is%20a%20microCMS%20official%20simple%20blog%20template.&demo-image=https://github.com/microcmsio/simple-blog-with-microcms/blob/main/public/cover.png?raw=true&demo-title=Simple%20Blog%20with%20microCMS&demo-url=https://simple-blog-with-microcms.vercel.app/&from=templates&project-name=Simple%20Blog%20with%20microCMS&repository-name=Simple%20Blog%20with%20microCMS&repository-url=https://github.com/microcmsio/simple-blog-with-microcms&env=MICROCMS_API_KEY,MICROCMS_SERVICE_DOMAIN,BASE_URL)
+
+
 ## System Requirements
 
 Node.js 18 or above
@@ -117,13 +133,6 @@ npm run dev
    ![](public/blog.png)
 
 5. Create and publish tag, writer, and blog content.
-
-## Deploy to Vercel
-
-deploy the example using Vercel:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?demo-description=This%20is%20a%20microCMS%20official%20simple%20blog%20template.&demo-image=https://github.com/microcmsio/simple-blog-with-microcms/blob/main/public/cover.png?raw=true&demo-title=Simple%20Blog%20with%20microCMS&demo-url=https://simple-blog-with-microcms.vercel.app/&from=templates&project-name=Simple%20Blog%20with%20microCMS&repository-name=Simple%20Blog%20with%20microCMS&repository-url=https://github.com/microcmsio/simple-blog-with-microcms&env=MICROCMS_API_KEY,MICROCMS_SERVICE_DOMAIN,BASE_URL)
-
 
 # Appendix
 ## Page Preview Settings
