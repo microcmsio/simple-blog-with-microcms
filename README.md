@@ -64,37 +64,69 @@ npm run dev
 
    Create three list format APIs.
 
+   - writer
+   - tag
+   - blog
+   
+---
+
    ```
-   # writer（List Format API）
-   - Field ID: name(Text Field)
-   - Field ID: profile(Text Area)
-   - Field ID: image(Image)
+   # writer （List Format API）
+
+   This is an API for registering authors of blogs.
+   The writer API has three fields. They are as follows.
+      
+   - Field ID: name(Field Type: Text Field)...Author's Name.
+   - Field ID: profile(Field Type: Text Area)...Author's profile text.
+   - Field ID: image(Field Type: Image)...Author's image.
    ```
+
+   The following capture is an example of the settings.
 
    ![](public/writer.png)
 
    ```
-   # tag（List Format API）
-   - Field ID: name(Text Field)
+   # tag （List Format API）
+
+   This is an API for registering tags for blog content.
+   The tag API has one field. They are as follows.
+
+   - Field ID: name(Field Type: Text Field)...Tag Name.
    ```
+
+   The following capture is an example of the settings.
 
    ![](public/tag.png)
 
    ```
-   # blog（List Format API）
-   - Field ID: title(Text Field)
-   - Field ID: description(Text Area)
-   - Field ID: content(Rich Text Editor)
-   - Field ID: thumbnail(Image)
-   - Field ID: tags(Multiple Content References - tag)
-   - Field ID: writer(Content Reference - writer)
+   # blog （List Format API）
+
+   This is an API for registering blog contents.
+   The blog API has six fields. They are as follows.
+
+   - Field ID: title(Field Type: Text Field)...Blog title.
+   - Field ID: description(Field Type: Text Area)...Blog description.
+   - Field ID: content(Field Type: Rich Text Editor)...Blog body.
+   - Field ID: thumbnail(Field Type: Image)...Blog thumbnail.
+   - Field ID: tags(Field Type: Multiple Content References - tag)...Blog tag.
+   - Field ID: writer(Field Type: Content Reference - writer)...Blog writer.
    ```
+
+   The following capture is an example of the settings.
 
    ![](public/blog.png)
 
 5. Create and publish tag, writer, and blog content.
 
-### Page Preview Settings
+## Deploy to Vercel
+
+deploy the example using Vercel:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?demo-description=This%20is%20a%20microCMS%20official%20simple%20blog%20template.&demo-image=https://github.com/microcmsio/simple-blog-with-microcms/blob/main/public/cover.png?raw=true&demo-title=Simple%20Blog%20with%20microCMS&demo-url=https://simple-blog-with-microcms.vercel.app/&from=templates&project-name=Simple%20Blog%20with%20microCMS&repository-name=Simple%20Blog%20with%20microCMS&repository-url=https://github.com/microcmsio/simple-blog-with-microcms&env=MICROCMS_API_KEY,MICROCMS_SERVICE_DOMAIN,BASE_URL)
+
+
+# Appendix
+## Page Preview Settings
 
 In order to preview draft content, a page preview must be set up in the microCMS administration page.
 
@@ -105,9 +137,3 @@ Replace `your-domain` with your deployed domain. (It also works with localhost)
 ![](public/page-preview-settings.png)
 
 Once set, the page preview button will be available on the content editing page.
-
-## Deploy to Vercel
-
-deploy the example using Vercel:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?demo-description=This%20is%20a%20microCMS%20official%20simple%20blog%20template.&demo-image=https://github.com/microcmsio/simple-blog-with-microcms/blob/main/public/cover.png?raw=true&demo-title=Simple%20Blog%20with%20microCMS&demo-url=https://simple-blog-with-microcms.vercel.app/&from=templates&project-name=Simple%20Blog%20with%20microCMS&repository-name=Simple%20Blog%20with%20microCMS&repository-url=https://github.com/microcmsio/simple-blog-with-microcms&env=MICROCMS_API_KEY,MICROCMS_SERVICE_DOMAIN,BASE_URL)
