@@ -127,7 +127,7 @@ Go to the "**/apis/[tags|writers|blog]/create**", then click on "**+ Add**".
 
 **Important**: For each content, you need to click on Publish. If not, the content will be in draft state.
 
-[ここに画像入れる]
+![](public/publish.png)
 
 ### Step 4. Get API Key
 
@@ -179,7 +179,21 @@ BASE_URL=xxxxxxxxxx
 You should be up and running on your blog http://localhost:3000!
 
 ### Step 6. Deploy on Vercel
-[WIP]
+
+You can deploy this app to the cloud with [Vercel](https://vercel.com/).
+
+#### Deploy Your Local Project
+To deploy your local project to Vercel, push it to GitHub/GitLab/Bitbucket and import to Vercel([Document](https://vercel.com/docs/getting-started-with-vercel/import)).
+
+**Important**: When importing a project in Vercel, be sure to click on the environment variables and set `MICROCMS_API_KEY`, `MICROCMS_SERVICE_DOMAIN` and `BASE_URL`.
+
+#### Deploy from Our Template
+Alternatively, you can deploy using our template by clicking on the Deploy button below.
+
+The Next.js project is now deployed and the environment variables (`MICROCMS_API_KEY`, `MICROCMS_SERVICE_DOMAIN` and `BASE_URL) are ready for input.
+Please set each environment variable and deploy.
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?demo-description=This%20is%20a%20microCMS%20official%20simple%20blog%20template.&demo-image=https://github.com/microcmsio/simple-blog-with-microcms/blob/main/public/cover.png?raw=true&demo-title=Simple%20Blog%20with%20microCMS&demo-url=https://simple-blog-with-microcms.vercel.app/&from=templates&project-name=Simple%20Blog%20with%20microCMS&repository-name=Simple%20Blog%20with%20microCMS&repository-url=https://github.com/microcmsio/simple-blog-with-microcms&env=MICROCMS_API_KEY,MICROCMS_SERVICE_DOMAIN,BASE_URL)
 
 ---
 
