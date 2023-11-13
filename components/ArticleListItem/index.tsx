@@ -12,7 +12,7 @@ type Props = {
 export default function ArticleListItem({ article }: Props) {
   return (
     <li className={styles.list}>
-      <Link href={`/articles/${article.id}`} className={styles.link}>
+      <Link href={`/blogs/${article.id}`} className={styles.link}>
         {article.thumbnail ? (
           <picture>
             <source
