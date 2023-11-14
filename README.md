@@ -40,6 +40,9 @@ Also, the format of the APIs must be **list format**.
 #### 1. create tag API
 First, here is an example of creating a **Tag API**.
 
+The tag API is an API for creating tags associated with each blog content.
+Blog content can have multiple tags set within the tag API.
+
 Go to /create-api (https://your-service-id.microcms.io/create-api) and select "Create your own".
 
 Next, enter Basic API Information.
@@ -63,6 +66,10 @@ Save the content type and continue.
 
 #### 2. create writer API
 Second, create a writer api.
+
+The writer API is an API for creating author information associated with each blog content.
+A blog content can set only one writer in the writer API.
+
 Basic API Information is as follows.
 
 - API Name: **writer**
@@ -84,6 +91,10 @@ Save the content type and continue.
 
 #### 3. create blog API
 Third, create a blog api.
+
+The blog API is an API for creating each blog content.
+Enter values for blog body, meta information, tag, writer, etc.
+
 Basic API Information is as follows.
 
 - API Name: **blog**
