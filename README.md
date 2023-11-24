@@ -39,18 +39,14 @@ The `tag` API is for creating tags associated with blog content. Blog content ca
 
 1. Go to `/create-api` (https://your-service-id.microcms.io/create-api) and select "Create your own".
 2. Enter basic API information:
-
-- API Name: **tag**
-- Endpoint: **tags**
-
+   - API Name: **tag**
+   - Endpoint: **tags**
 3. Select API Type and choose **List** Format.
 4. Define API Schema. The `tag` API has one field:
-
-- `name` - **Text Field**. **Field ID** and **Display Name** should be set to `name`.
+   - `name` - **Text Field**. **Field ID** and **Display Name** should be set to `name`.
+5. Click "Create" and continue.
 
 ![](public/tag.png)
-
-5. Click "Create" and continue.
 
 #### Create `writer` API
 
@@ -58,20 +54,16 @@ The `writer` API is for creating author information and associating it with each
 
 1. Go to `/create-api` (https://your-service-id.microcms.io/create-api) and select "Create your own".
 2. Enter basic API information:
-
-- API Name: **writer**
-- Endpoint: **writers**
-
+   - API Name: **writer**
+   - Endpoint: **writers**
 3. Select API Type and choose **List** Format.
 4. Define API Schema. The `writer` API has three fields:
-
-- `name` - **Text Field**. **Field ID** and **Display Name** should be set to `name`.
-- `profile` - **Text Area**. **Field ID** and **Display Name** should be set to `profile`.
-- `image` - **Image Field**. **Field ID** and **Display Name** should be set to `image`.
+   - `name` - **Text Field**. **Field ID** and **Display Name** should be set to `name`.
+   - `profile` - **Text Area**. **Field ID** and **Display Name** should be set to `profile`.
+   - `image` - **Image Field**. **Field ID** and **Display Name** should be set to `image`.
+5. Click "Create" and continue.
 
 ![](public/writer.png)
-
-5. Click "Create" and continue.
 
 #### Create `blog` API
 
@@ -79,29 +71,25 @@ The `blog` API is for creating blog content.
 
 1. Go to `/create-api` (https://your-service-id.microcms.io/create-api) and select "Create your own".
 2. Enter basic API information:
-
-- API Name: **blog**
-- Endpoint: **blog**
-
+   - API Name: **blog**
+   - Endpoint: **blog**
 3. Select API Type and choose **List** Format.
 4. Define API Schema. The `blog` API has six fields:
-
-- `title` - **Text Field**. **Field ID** and **Display Name** should be set to `title`.
-- `description` - **Text Area**. **Field ID** and **Display Name** should be set to `description`.
-- `content` - **Rich Text Editor**. **Field ID** and **Display Name** should be set to `content`.
-- `thumbnail` - **Image Field**. **Field ID** and **Display Name** should be set to `thumbnail`.
-- `tags` - **Multiple Content References - tag**. **Field ID** and **Display Name** should be set to `tags`.
-- `writer` - **Content Reference - writer**. **Field ID** and **Display Name** should be set to `writer`.
+   - `title` - **Text Field**. **Field ID** and **Display Name** should be set to `title`.
+   - `description` - **Text Area**. **Field ID** and **Display Name** should be set to `description`.
+   - `content` - **Rich Text Editor**. **Field ID** and **Display Name** should be set to `content`.
+   - `thumbnail` - **Image Field**. **Field ID** and **Display Name** should be set to `thumbnail`.
+   - `tags` - **Multiple Content References - tag**. **Field ID** and **Display Name** should be set to `tags`.
+   - `writer` - **Content Reference - writer**. **Field ID** and **Display Name** should be set to `writer`.
+5. Click "Create" and continue.
 
 ![](public/blog.png)
-
-5. Click "Create" and continue.
 
 ### Enter Content
 
 1. Enter content for the `tag` API, `writer` API, and `blog` API. Since the `tag` API and `writer` API are referenced from the `blog` API, please create the `blog` API content last.
 
-2. Go to the `/apis/[tags|writers|blog]/create` endpoint, click "**+ Add**", and enter content for each of the following:
+2. Go to the `/apis/[tags|writers|blog]/create` endpoint, click "**+ Add**", enter content for each of the following and click publish:
 
 **tag**
 
@@ -117,8 +105,6 @@ The `blog` API is for creating blog content.
 
 - You just need 1 blog content.
 - Use dummy data for the text and image.
-
-3. Click **Publish** for each type. If this is not done the content will remain in draft state.
 
 ![](public/publish.png)
 
