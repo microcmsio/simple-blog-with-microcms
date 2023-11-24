@@ -33,7 +33,7 @@ https://simple-blog-with-microcms.vercel.app/
 
 You will need to create three APIs, all in the **list** format.
 
-#### Create `tag` API.
+#### **Create `tag` API.**
 
 The `tag` API is for creating tags associated with blog content. Blog content can have multiple tags set within the tag API.
 
@@ -48,7 +48,7 @@ The `tag` API is for creating tags associated with blog content. Blog content ca
 
 ![](public/tag.png)
 
-#### Create `writer` API
+#### **Create `writer` API**
 
 The `writer` API is for creating author information and associating it with each blog article. A blog article can only have one writer set in the writer API.
 
@@ -65,7 +65,7 @@ The `writer` API is for creating author information and associating it with each
 
 ![](public/writer.png)
 
-#### Create `blog` API
+#### **Create `blog` API**
 
 The `blog` API is for creating blog content.
 
@@ -108,16 +108,18 @@ The `blog` API is for creating blog content.
 
 ![](public/publish.png)
 
-### Retrieve API Key
+### Running locally
+
+#### **Retrieve API Key**
 
 1. From the top page of the dashboard, Go to **"/api-keys"**.
 2. Copy and retrieve the value of the **"default"** API Key.
 
 This API key will be used to make requests to microCMS from Next.js.
 
-### Running locally
+#### **Set environment variables**
 
-1. Retrieve and set your local environment variables. Create a `.env.local` file in the root of the project and enter the following microCMS values:
+Create a `.env.local` file in the root of the project and enter the following microCMS values:
 
 ```
 MICROCMS_API_KEY=xxxxxxxxxx
@@ -131,21 +133,23 @@ BASE_URL=xxxxxxxxxx
   - Development: http://localhost:3000
   - Production: https://xxxxxxxx.vercel.app
 
-2. Install package dependencies
+#### **Run the local development server**
+
+This application requires Node.js version 18 or higher.
+
+- Install package dependencies
 
 ```bash
 npm install
 ```
 
-3. Launch the local development web server
+- Launch the local development web server
 
 ```bash
 npm run dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser and access your local application!
-
-**Important**: This application requires Node.js version 18 or higher.
+- Open [http://localhost:3000](http://localhost:3000) in your browser and access your local application!
 
 ### Deploy your project to Vercel
 
@@ -153,7 +157,7 @@ npm run dev
 2. Click on the environment variables and set `MICROCMS_API_KEY`, `MICROCMS_SERVICE_DOMAIN` and `BASE_URL`.
 3. Click Deploy!
 
-#### Deploy from Our Template
+#### **Deploy from Our Template**
 
 Alternatively, you can deploy our template by clicking on the Deploy button at the top of this page and setting the same environment variables.
 
