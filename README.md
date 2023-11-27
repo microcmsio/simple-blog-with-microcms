@@ -2,177 +2,122 @@
 
 ![](public/cover.png)
 
-This is a microCMS official simple blog template.
+This is an official microCMS simple blog template.
 
 This blog is built using microCMS, a headless CMS made in Japan, and Next.js.
 
-You are free to enter the following information in this blog.
-- Blog body (& its meta information)
+This template supports authoring and editing the following blog content and information:
+
+- Blog details
 - Writer
 - Tags
 
 ## Demo
+
 https://simple-blog-with-microcms.vercel.app/
 
-## Deploy to Vercel
-deploy the example using Vercel:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?demo-description=This%20is%20a%20microCMS%20official%20simple%20blog%20template.&demo-image=https://github.com/microcmsio/simple-blog-with-microcms/blob/main/public/cover.png?raw=true&demo-title=Simple%20Blog%20with%20microCMS&demo-url=https://simple-blog-with-microcms.vercel.app/&from=templates&project-name=Simple%20Blog%20with%20microCMS&repository-name=Simple%20Blog%20with%20microCMS&repository-url=https://github.com/microcmsio/simple-blog-with-microcms&env=MICROCMS_API_KEY,MICROCMS_SERVICE_DOMAIN,BASE_URL)
-
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?demo-description=This%20is%20a%20microCMS%20official%20simple%20blog%20template.&demo-image=https://github.com/microcmsio/simple-blog-with-microcms/blob/main/public/cover.png?raw=true&demo-title=Simple%20Blog%20with%20microCMS&demo-url=https://simple-blog-with-microcms.vercel.app/&from=templates&project-name=Simple%20Blog%20with%20microCMS&repository-name=simple-blog-with-microcms&repository-url=https://github.com/microcmsio/simple-blog-with-microcms&env=MICROCMS_API_KEY,MICROCMS_SERVICE_DOMAIN,BASE_URL)
 
 ## Configuration
 
-### Step 1. Create an account and a service on microCMS
+### Create an account and a service on microCMS
 
-First, [create an account on microCMS](https://app.microcms.io/signup).
+1. Create an account on [microCMS](https://app.microcms.io/signup).
+2. Create a new empty service from the [dashboard](https://app.microcms.io/create-service). When creating the service, please select "Create your own".
+3. Enter any value you like for **Service Name** and **Service ID**.
+4. You now have a new service created that you can access!
 
-After creating an account, [create a new empty service from the dashboard](https://app.microcms.io/create-service).
-When creating a service, please select "Create your own".
+### Create APIs
 
-Next, Enter any value you like for **Service Name** and **Service ID**.
+You will need to create three APIs, all in the **list** format.
 
-Then access the service you just created!
+#### **Create `tag` API.**
 
-### Step 2. Create APIs
-In this example, You need to create three APIs.
-Also, the format of the APIs must be **list format**.
+The `tag` API is for creating tags associated with blog content. Blog content can have multiple tags set within the tag API.
 
-#### 1. create tag API
-First, here is an example of creating a **Tag API**.
-
-The tag API is an API for creating tags associated with each blog content.
-Blog content can have multiple tags set within the tag API.
-
-Go to /create-api (https://your-service-id.microcms.io/create-api) and select "Create your own".
-
-Next, enter Basic API Information.
-it should look as follows.
-
-- API Name: **tag**
-- Endpoint: **tags**
-
-Next, Select API Type.
-Choose "**List Format**".
-
-Finally, Define API Schema.
-Tag API has one field. They are as follows.
-
-- `name` - **Text Field**. **Field ID** and **Display Name** should be set to `name`.
+1. Go to `/create-api` (https://your-service-id.microcms.io/create-api) and select "Create your own".
+2. Enter basic API information:
+   - API Name: **tag**
+   - Endpoint: **tags**
+3. Select API Type and choose **List** Format.
+4. Define API Schema. The `tag` API has one field:
+   - `name` - **Text Field**. **Field ID** and **Display Name** should be set to `name`.
+5. Click "Create" and continue.
 
 ![](public/tag.png)
 
-Congratulations! You have now created your tag API!
-Save the content type and continue.
+#### **Create `writer` API**
 
-#### 2. create writer API
-Second, create a writer api.
+The `writer` API is for creating author information and associating it with each blog article. A blog article can only have one writer set in the writer API.
 
-The writer API is an API for creating author information associated with each blog content.
-A blog content can set only one writer in the writer API.
-
-Basic API Information is as follows.
-
-- API Name: **writer**
-- Endpoint: **writers**
-
-Next, Select API Type.
-Choose "**List Format**".
-
-Finally, Define API Schema.
-The writer API has three fields. They are as follows.
-
-- `name` - **Text Field**. **Field ID** and **Display Name** should be set to `name`.
-- `profile` - **Text Area**. **Field ID** and **Display Name** should be set to `profile`.
-- `image` - **Image Field**. **Field ID** and **Display Name** should be set to `image`.
+1. Go to `/create-api` (https://your-service-id.microcms.io/create-api) and select "Create your own".
+2. Enter basic API information:
+   - API Name: **writer**
+   - Endpoint: **writers**
+3. Select API Type and choose **List** Format.
+4. Define API Schema. The `writer` API has three fields:
+   - `name` - **Text Field**. **Field ID** and **Display Name** should be set to `name`.
+   - `profile` - **Text Area**. **Field ID** and **Display Name** should be set to `profile`.
+   - `image` - **Image Field**. **Field ID** and **Display Name** should be set to `image`.
+5. Click "Create" and continue.
 
 ![](public/writer.png)
 
-Save the content type and continue.
+#### **Create `blog` API**
 
-#### 3. create blog API
-Third, create a blog api.
+The `blog` API is for creating blog content.
 
-The blog API is an API for creating each blog content.
-Enter values for blog body, meta information, tag, writer, etc.
-
-Basic API Information is as follows.
-
-- API Name: **blog**
-- Endpoint: **blog**
-
-Next, Select API Type.
-Choose "**List Format**".
-
-Finally, Define API Schema.
-The blog API has six fields. They are as follows.
-
-- `title` - **Text Field**. **Field ID** and **Display Name** should be set to `title`.
-- `description` - **Text Area**. **Field ID** and **Display Name** should be set to `description`.
-- `content` - **Rich Text Editor**. **Field ID** and **Display Name** should be set to `content`.
-- `thumbnail` - **Image Field**. **Field ID** and **Display Name** should be set to `thumbnail`.
-- `tags` - **Multiple Content References - tag**. **Field ID** and **Display Name** should be set to `tags`.
-- `writer` - **Content Reference - writer**. **Field ID** and **Display Name** should be set to `writer`.
+1. Go to `/create-api` (https://your-service-id.microcms.io/create-api) and select "Create your own".
+2. Enter basic API information:
+   - API Name: **blog**
+   - Endpoint: **blog**
+3. Select API Type and choose **List** Format.
+4. Define API Schema. The `blog` API has six fields:
+   - `title` - **Text Field**. **Field ID** and **Display Name** should be set to `title`.
+   - `description` - **Text Area**. **Field ID** and **Display Name** should be set to `description`.
+   - `content` - **Rich Text Editor**. **Field ID** and **Display Name** should be set to `content`.
+   - `thumbnail` - **Image Field**. **Field ID** and **Display Name** should be set to `thumbnail`.
+   - `tags` - **Multiple Content References - tag**. **Field ID** and **Display Name** should be set to `tags`.
+   - `writer` - **Content Reference - writer**. **Field ID** and **Display Name** should be set to `writer`.
+5. Click "Create" and continue.
 
 ![](public/blog.png)
 
-Save the content type and continue.
+### Enter Content
 
-### Step 3. Create Contents
-Create content for the tag API, writer API, and blog API.
+1. Enter content for the `tag` API, `writer` API, and `blog` API. Since the `tag` API and `writer` API are referenced from the `blog` API, please create the `blog` API content last.
 
-Since the tag API and writer API are referenced from the blog API, please create the blog API content last.
+2. Go to the `/apis/[tags|writers|blog]/create` endpoint, click "**+ Add**", enter content for each of the following and click publish:
 
-Go to the "**/apis/[tags|writers|blog]/create**", then click on "**+ Add**".
+**tag**
 
-#### tag
 - You just need 1 tag content.
 - Use dummy data for the text.
 
-#### writer
+**writer**
+
 - You just need 1 writer content.
 - Use dummy data for the text and image.
 
-#### blog
+**blog**
+
 - You just need 1 blog content.
 - Use dummy data for the text and image.
 
-**Important**: For each content, you need to click on Publish. If not, the content will be in draft state.
-
 ![](public/publish.png)
 
-### Step 4. Get API Key
+### Running locally
 
-From the top page of the dashboard, Go to **"/api-keys"**.
+#### **Retrieve API Key**
 
-Copy and retrieve the value of the **"default"** API Key.
+1. From the top page of the dashboard, Go to **"/api-keys"**.
+2. Copy and retrieve the value of the **"default"** API Key.
 
-This API key will be used when making requests to microCMS from Next.js applications.
+This API key will be used to make requests to microCMS from Next.js.
 
+#### **Set environment variables**
 
-### Step 5. Install and run Next.js Application
-
-First install the package.
-
-1. Install package
-
-```bash
-npm install
-```
-
-2. Launch the development environment
-
-```bash
-npm run dev
-```
-
-3. Access to development environment
-   Access to [http://localhost:3000](http://localhost:3000)
-
-**Important**: Requires node.js version 18 or higher.
-
-Next, set environmental variables.
-
-Create a `.env` file directly under root and enter the following information
+Create a `.env.local` file in the root of the project and enter the following microCMS values:
 
 ```
 MICROCMS_API_KEY=xxxxxxxxxx
@@ -180,36 +125,44 @@ MICROCMS_SERVICE_DOMAIN=xxxxxxxxxx
 BASE_URL=xxxxxxxxxx
 ```
 
-- `MICROCMS_API_KEY`: You can check it from the microCMS dashboard under "Service Settings > API Keys".
-- `MICROCMS_SERVICE_DOMAIN`: The xxxxxxxxxx part of the microCMS dashboard URL (https://xxxxxxxx.microcms.io).
-- `BASE_URL`: The URL to deploy to. Please describe it from the protocol.
-   - ex）
-      - development → http://localhost:3000
-      - production → https://xxxxxxxx.vercel.app/ etc.
+- `MICROCMS_API_KEY`: Retrieve the API key from the microCMS dashboard under "Service Settings > API Keys".
+- `MICROCMS_SERVICE_DOMAIN`: Retrieve the service domain from the microCMS dashboard URL (https://xxxxxxxx.microcms.io).
+- `BASE_URL`: The deployment URL and protocol. For example:
+  - Development: http://localhost:3000
+  - Production: https://xxxxxxxx.vercel.app
 
-You should be up and running on your blog http://localhost:3000!
+#### **Run the local development server**
 
-### Step 6. Deploy on Vercel
+This application requires Node.js version 18 or higher.
 
-You can deploy this app to the cloud with [Vercel](https://vercel.com/).
+- Install package dependencies
 
-#### Deploy Your Local Project
-To deploy your local project to Vercel, push it to GitHub/GitLab/Bitbucket and import to Vercel([Document](https://vercel.com/docs/getting-started-with-vercel/import)).
+```bash
+npm install
+```
 
-**Important**: When importing a project in Vercel, be sure to click on the environment variables and set `MICROCMS_API_KEY`, `MICROCMS_SERVICE_DOMAIN` and `BASE_URL`.
+- Launch the local development web server
 
-#### Deploy from Our Template
-Alternatively, you can deploy using our template by clicking on the Deploy button below.
+```bash
+npm run dev
+```
 
-The Next.js project is now deployed and the environment variables (`MICROCMS_API_KEY`, `MICROCMS_SERVICE_DOMAIN` and `BASE_URL`) are ready for input.
-Please set each environment variable and deploy.
+- Open [http://localhost:3000](http://localhost:3000) in your browser and access your local application!
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?demo-description=This%20is%20a%20microCMS%20official%20simple%20blog%20template.&demo-image=https://github.com/microcmsio/simple-blog-with-microcms/blob/main/public/cover.png?raw=true&demo-title=Simple%20Blog%20with%20microCMS&demo-url=https://simple-blog-with-microcms.vercel.app/&from=templates&project-name=Simple%20Blog%20with%20microCMS&repository-name=Simple%20Blog%20with%20microCMS&repository-url=https://github.com/microcmsio/simple-blog-with-microcms&env=MICROCMS_API_KEY,MICROCMS_SERVICE_DOMAIN,BASE_URL)
+### Deploy your project to Vercel
+
+1. [Import your repository](https://vercel.com/docs/getting-started-with-vercel/import) from GitHub, GitLab, or Bitbucket.
+2. Click on the environment variables and set `MICROCMS_API_KEY`, `MICROCMS_SERVICE_DOMAIN` and `BASE_URL`.
+3. Click Deploy!
+
+#### **Deploy from Our Template**
+
+Alternatively, you can deploy our template by clicking on the Deploy button at the top of this page and setting the same environment variables.
 
 ---
 
-
 # Appendix
+
 ## Page Preview Settings
 
 In order to preview draft content, a page preview must be set up in the microCMS administration page.
