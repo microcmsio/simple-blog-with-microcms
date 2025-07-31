@@ -133,7 +133,7 @@ BASE_URL=xxxxxxxxxx
 
 #### **Run the local development server**
 
-This application requires Node.js version 18 or higher.
+This application requires Node.js version 22 or higher.
 
 - Install package dependencies
 
