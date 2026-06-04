@@ -170,6 +170,18 @@ For security reasons, we recommend using
 For the latest security information, please refer to:
 https://nodejs.org/en/blog/vulnerability/
 
+## About the Included `.npmrc` File
+
+This template includes an `.npmrc` file that enables npm's `min-release-age` setting.
+
+```ini
+min-release-age=7
+```
+
+This setting is included as part of a supply chain security measure. It prevents npm from installing package versions that were published less than 7 days ago, helping reduce the risk of using malicious or compromised packages immediately after they are released.
+
+You can adjust the `min-release-age` value or remove this setting entirely to suit your project's requirements and operational policies.
+
 ---
 
 # Appendix
