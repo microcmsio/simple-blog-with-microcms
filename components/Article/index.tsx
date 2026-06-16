@@ -55,9 +55,13 @@ export default function Article({ data }: Props) {
       </picture>
       <div
         className={styles.content}
-        dangerouslySetInnerHTML={{
-          __html: `${formatRichText(data.content)}`,
-        }}
+        dangerouslySetInnerHTML={
+          data.content
+            ? {
+                __html: `${formatRichText(data.content)}`,
+              }
+            : undefined
+        }
       />
     </main>
   );

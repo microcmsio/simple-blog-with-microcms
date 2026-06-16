@@ -8,24 +8,24 @@ import type {
 import { notFound } from 'next/navigation';
 
 export type Tag = {
-  name: string;
+  name?: string;
 } & MicroCMSContentId &
   MicroCMSDate;
 
 export type Writer = {
-  name: string;
-  profile: string;
+  name?: string;
+  profile?: string;
   image?: MicroCMSImage;
 } & MicroCMSContentId &
   MicroCMSDate;
 
 export type Blog = {
-  title: string;
-  description: string;
-  content: string;
+  title?: string;
+  description?: string;
+  content?: string;
   thumbnail?: MicroCMSImage;
-  tags?: Tag[];
-  writer?: Writer;
+  tags: Tag[];
+  writer: Writer | null;
 };
 
 export type Article = Blog & MicroCMSContentId & MicroCMSDate;
