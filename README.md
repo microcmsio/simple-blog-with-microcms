@@ -170,17 +170,20 @@ For security reasons, we recommend using
 For the latest security information, please refer to:
 https://nodejs.org/en/blog/vulnerability/
 
-## About the Included `.npmrc` File
+## About the `.npmrc` Included in This Template
 
-This template includes an `.npmrc` file that enables npm's `min-release-age` setting.
+This template includes a `.npmrc` file that enables npm's `min-release-age` and `registry` settings.
 
 ```ini
 min-release-age=7
+registry=https://npm.flatt.tech
 ```
 
-This setting is included as part of a supply chain security measure. It prevents npm from installing package versions that were published less than 7 days ago, helping reduce the risk of using malicious or compromised packages immediately after they are released.
+The `min-release-age` setting is enabled as part of a software supply chain security strategy. It excludes npm package versions that have been published for less than seven days from being installed. This helps reduce the risk of accidentally installing malicious or compromised packages immediately after they are published.
 
-You can adjust the `min-release-age` value or remove this setting entirely to suit your project's requirements and operational policies.
+The `registry` setting points npm to [Takumi Guard](https://flatt.tech/takumi/features/guard), an npm security proxy provided by GMO Flatt Security. During `npm install`, Takumi Guard checks packages against a database of known threats and blocks the installation of malicious packages. It works anonymously without requiring an authentication token or any additional configuration. This setting applies not only to local development, but also to dependency updates performed by GitHub Actions and Dependabot.
+
+You are free to modify these settings or remove the `.npmrc` file entirely to match your project's requirements and security policies.
 
 ---
 
