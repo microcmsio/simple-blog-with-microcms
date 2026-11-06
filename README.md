@@ -133,7 +133,7 @@ BASE_URL=xxxxxxxxxx
 
 #### **Run the local development server**
 
-This application requires Node.js version 24 or later.
+This application requires Node.js 26.
 
 - Install package dependencies
 
@@ -161,11 +161,11 @@ Alternatively, you can deploy our template by clicking on the Deploy button at t
 
 ## About the Node.js version
 
-This template assumes **Node.js 24 or later**.
+This template assumes **Node.js 26**.
 
 Node.js receives regular security updates.
 For security reasons, we recommend using
-**the latest patch version of the major version you are using (e.g. 24.x)**.
+**the latest patch version of the major version you are using (e.g. 26.x)**.
 
 For the latest security information, please refer to:
 https://nodejs.org/en/blog/vulnerability/
